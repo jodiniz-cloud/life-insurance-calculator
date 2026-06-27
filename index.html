@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Insurance Calculator 2025 — How Much Coverage Do You Need?</title>
+<meta name="description" content="Calculate exactly how much life insurance you need. Enter your income, debts, dependents and savings to get a personalized coverage recommendation. Free, instant, no signup.">
+<link rel="canonical" href="https://life-insurance-calculator.pages.dev/">
+<meta property="og:title" content="Life Insurance Calculator 2025 — Coverage Needs Estimator">
+<meta property="og:description" content="Find out exactly how much life insurance coverage you need based on your income, mortgage, debts and dependents.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://life-insurance-calculator.pages.dev/">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6626869606288906" crossorigin="anonymous"></script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Life Insurance Calculator","description":"Calculate how much life insurance coverage you need in 2025","url":"https://life-insurance-calculator.pages.dev/","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much life insurance do I need?","acceptedAnswer":{"@type":"Answer","text":"A common rule of thumb is 10–12× your annual income. However, a more accurate method (DIME: Debt, Income, Mortgage, Education) adds up your debts, years of income replacement needed, mortgage balance, and children's education costs, then subtracts existing savings and coverage. Our calculator uses this method."}},{"@type":"Question","name":"What is the difference between term and whole life insurance?","acceptedAnswer":{"@type":"Answer","text":"Term life insurance provides coverage for a set period (10, 20, or 30 years) and is significantly cheaper. Whole life insurance is permanent (lasts your lifetime), builds cash value, and costs 5–15× more per month. For most families, term life insurance offers the best value — you buy a 20-year term while your children are young and your mortgage is active, then reassess."}},{"@type":"Question","name":"How much does life insurance cost per month?","acceptedAnswer":{"@type":"Answer","text":"A healthy 35-year-old can get a $500,000 20-year term policy for approximately $25–$35/month. Rates increase significantly with age, tobacco use, and health conditions. At age 45, the same policy may cost $50–$80/month. Whole life insurance for the same coverage amount typically runs $300–$600/month."}},{"@type":"Question","name":"Does employer-provided life insurance count toward my needs?","acceptedAnswer":{"@type":"Answer","text":"Group life insurance from your employer typically provides 1–2× your annual salary — far less than the 10–12× recommended. It's also not portable: if you leave the job, you lose the coverage. Use employer coverage as a bonus, not your primary protection. Enter your employer coverage amount in the 'Existing Coverage' field to see your remaining gap."}},{"@type":"Question","name":"Should I buy life insurance if I'm single with no dependents?","acceptedAnswer":{"@type":"Answer","text":"If you have no dependents and no co-signed debts (student loans, mortgage), you may need little or no life insurance. Life insurance replaces income that others depend on. However, buying a small policy young (while healthy) locks in low rates for the future. If you plan to have a family within 5–10 years, getting covered now is usually cheaper than waiting."}}]}</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8fafc;color:#0f172a;line-height:1.6}
+header{background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff;padding:28px 20px 24px;text-align:center}
+header h1{font-size:clamp(20px,4vw,30px);font-weight:700}
+header p{margin-top:6px;opacity:.8;font-size:15px}
+.container{max-width:860px;margin:0 auto;padding:0 16px 60px}
+.ad-slot{background:#f1f5f9;border:1px dashed #cbd5e1;border-radius:8px;min-height:90px;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:12px;margin:20px 0}
+.card{background:#fff;border-radius:12px;box-shadow:0 1px 4px rgba(0,0,0,.08);padding:28px;margin-top:24px}
+.card h2{font-size:18px;font-weight:700;color:#1e293b;margin-bottom:20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:560px){.grid-2{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:600;color:#475569;margin-bottom:5px}
+.hint{font-size:11px;color:#94a3b8;margin-top:3px}
+.input-wrap{position:relative}
+.prefix,.suffix{position:absolute;top:50%;transform:translateY(-50%);font-size:15px;color:#64748b;font-weight:600;pointer-events:none}
+.prefix{left:12px}.suffix{right:12px}
+input[type=number],select{width:100%;border:1.5px solid #e2e8f0;border-radius:8px;background:#f8fafc;color:#0f172a;font-size:16px;padding:10px 12px;outline:none;transition:border-color .2s}
+input[type=number]:focus,select:focus{border-color:#1e3a5f;background:#fff}
+input.has-prefix{padding-left:28px}
+.sec-label{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#64748b;margin:22px 0 14px;padding-bottom:6px;border-bottom:1px solid #f1f5f9}
+.calc-btn{width:100%;margin-top:22px;padding:14px;background:linear-gradient(135deg,#0f172a,#1e3a5f);color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer;transition:opacity .2s}
+.calc-btn:hover{opacity:.9}
+#results{display:none}
+.coverage-hero{text-align:center;padding:24px 0 8px}
+.coverage-hero .amount{font-size:52px;font-weight:800;color:#0f172a;letter-spacing:-2px}
+.coverage-hero .label{font-size:16px;color:#64748b;margin-top:4px}
+.coverage-hero .sub{font-size:14px;color:#94a3b8;margin-top:6px}
+.breakdown-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+@media(max-width:500px){.breakdown-grid{grid-template-columns:1fr}}
+.bk-item{background:#f8fafc;border-radius:8px;padding:12px 14px;display:flex;justify-content:space-between;align-items:center}
+.bk-item .bk-name{font-size:13px;color:#64748b}
+.bk-item .bk-val{font-size:15px;font-weight:700;color:#0f172a}
+.bk-item.deduct .bk-val{color:#16a34a}
+.plan-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+@media(max-width:500px){.plan-grid{grid-template-columns:1fr}}
+.plan-card{border-radius:10px;padding:18px;border:2px solid #e2e8f0;text-align:center}
+.plan-card.term{border-color:#3b82f6;background:#eff6ff}
+.plan-card.whole{border-color:#8b5cf6;background:#faf5ff}
+.plan-card .ptitle{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px}
+.plan-card.term .ptitle{color:#1d4ed8}
+.plan-card.whole .ptitle{color:#6d28d9}
+.plan-card .pprice{font-size:28px;font-weight:800;line-height:1}
+.plan-card.term .pprice{color:#1d4ed8}
+.plan-card.whole .pprice{color:#6d28d9}
+.plan-card .pmo{font-size:12px;color:#94a3b8}
+.plan-card .pdesc{font-size:12px;color:#64748b;margin-top:10px;line-height:1.5}
+.plan-card.recommended::before{content:'Best value';background:#3b82f6;color:#fff;font-size:10px;font-weight:700;padding:2px 10px;border-radius:10px;display:inline-block;margin-bottom:8px}
+.bar-wrap{margin-top:20px}
+.bar-label{display:flex;justify-content:space-between;font-size:12px;color:#64748b;margin-bottom:4px}
+.bar-track{height:20px;background:#f1f5f9;border-radius:10px;overflow:hidden}
+.bar-fill{height:100%;border-radius:10px;transition:width .6s}
+.info-box{background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 16px;margin-top:16px;font-size:14px;color:#1e40af;line-height:1.7}
+.disclaimer{background:#f8fafc;border-radius:8px;padding:12px 16px;font-size:12px;color:#94a3b8;margin-top:16px}
+details{border-bottom:1px solid #f1f5f9;padding:14px 0}
+summary{font-size:15px;font-weight:600;cursor:pointer;color:#1e293b;list-style:none;display:flex;justify-content:space-between}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:20px;color:#1e3a5f;font-weight:400}
+details[open] summary::after{content:'−'}
+details p{margin-top:10px;color:#475569;font-size:14px;line-height:1.7}
+footer{text-align:center;color:#94a3b8;font-size:12px;padding:20px;border-top:1px solid #e2e8f0;margin-top:40px}
+footer a{color:#64748b}
+</style>
+</head>
+<body>
+<header>
+  <h1>🛡️ Life Insurance Calculator</h1>
+  <p>How much coverage does your family actually need? 2025 Edition</p>
+</header>
+<div class="container">
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6626869606288906" data-ad-slot="1122334455" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="card">
+    <h2>📋 Your Information</h2>
+
+    <div class="sec-label">Income & Age</div>
+    <div class="grid-2">
+      <div>
+        <label for="age">Your Age</label>
+        <input type="number" id="age" value="35" min="18" max="70">
+      </div>
+      <div>
+        <label for="income">Annual Income</label>
+        <div class="input-wrap"><span class="prefix">$</span><input type="number" id="income" class="has-prefix" value="75000" min="0" step="1000"></div>
+      </div>
+    </div>
+    <div style="margin-top:14px">
+      <label for="years">Years of Income to Replace</label>
+      <input type="number" id="years" value="20" min="1" max="40">
+      <div class="hint">How many years until your youngest dependent is financially independent?</div>
+    </div>
+
+    <div class="sec-label">Debts & Obligations</div>
+    <div class="grid-2">
+      <div>
+        <label for="mortgage">Mortgage Balance</label>
+        <div class="input-wrap"><span class="prefix">$</span><input type="number" id="mortgage" class="has-prefix" value="250000" min="0" step="1000"></div>
+      </div>
+      <div>
+        <label for="other-debt">Other Debts (loans, cards)</label>
+        <div class="input-wrap"><span class="prefix">$</span><input type="number" id="other-debt" class="has-prefix" value="20000" min="0" step="1000"></div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:14px">
+      <div>
+        <label for="children">Number of Children</label>
+        <input type="number" id="children" value="2" min="0" max="10">
+      </div>
+      <div>
+        <label for="edu-cost">College Fund per Child</label>
+        <div class="input-wrap"><span class="prefix">$</span><input type="number" id="edu-cost" class="has-prefix" value="50000" min="0" step="5000"></div>
+        <div class="hint">Avg 4-yr in-state public: ~$110k (2025)</div>
+      </div>
+    </div>
+
+    <div class="sec-label">Existing Assets & Coverage</div>
+    <div class="grid-2">
+      <div>
+        <label for="savings">Savings & Investments</label>
+        <div class="input-wrap"><span class="prefix">$</span><input type="number" id="savings" class="has-prefix" value="50000" min="0" step="1000"></div>
+        <div class="hint">401k, brokerage, savings accounts</div>
+      </div>
+      <div>
+        <label for="existing">Existing Life Insurance</label>
+        <div class="input-wrap"><span class="prefix">$</span><input type="number" id="existing" class="has-prefix" value="100000" min="0" step="10000"></div>
+        <div class="hint">Include employer group coverage</div>
+      </div>
+    </div>
+
+    <div class="sec-label">Gender (affects premium estimate)</div>
+    <div style="display:flex;gap:10px">
+      <button class="radio-btn active" id="btn-male" onclick="setGender('male')">Male</button>
+      <button class="radio-btn" id="btn-female" onclick="setGender('female')">Female</button>
+    </div>
+    <input type="hidden" id="gender" value="male">
+
+    <button class="calc-btn" onclick="calculate()">Calculate My Coverage Need →</button>
+  </div>
+
+  <div id="results">
+    <div class="card">
+      <div class="coverage-hero">
+        <div class="amount" id="total-coverage">$0</div>
+        <div class="label">Recommended Life Insurance Coverage</div>
+        <div class="sub" id="coverage-sub"></div>
+      </div>
+
+      <div class="breakdown-grid" id="breakdown"></div>
+
+      <div class="bar-wrap">
+        <div class="bar-label"><span>Coverage gap</span><span id="gap-label"></span></div>
+        <div class="bar-track"><div class="bar-fill" id="gap-bar" style="background:#ef4444"></div></div>
+        <div class="bar-label" style="margin-top:6px"><span>Already covered</span><span id="covered-label"></span></div>
+        <div class="bar-track"><div class="bar-fill" id="covered-bar" style="background:#22c55e"></div></div>
+      </div>
+
+      <div class="plan-grid" id="plan-grid"></div>
+      <div class="info-box" id="info-box"></div>
+      <div class="disclaimer">⚠️ Estimates only. Actual premiums depend on your health, insurer, and underwriting. Get quotes from multiple insurers. This calculator does not constitute financial advice.</div>
+    </div>
+  </div>
+
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6626869606288906" data-ad-slot="2233445566" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+    <details open><summary>How much life insurance do I need?</summary><p>A common rule of thumb is 10–12× your annual income. However, a more accurate method (DIME: Debt, Income, Mortgage, Education) adds up your debts, years of income replacement needed, mortgage balance, and children's education costs, then subtracts existing savings and coverage. Our calculator uses this method.</p></details>
+    <details><summary>What is the difference between term and whole life insurance?</summary><p>Term life insurance provides coverage for a set period (10, 20, or 30 years) and is significantly cheaper. Whole life insurance is permanent, builds cash value, and costs 5–15× more per month. For most families, term life offers the best value — buy a 20-year term while your children are young and mortgage is active, then reassess.</p></details>
+    <details><summary>How much does life insurance cost per month?</summary><p>A healthy 35-year-old can get a $500,000 20-year term policy for approximately $25–$35/month. Rates increase significantly with age, tobacco use, and health conditions. At age 45, the same policy may cost $50–$80/month. Whole life for the same coverage typically runs $300–$600/month.</p></details>
+    <details><summary>Does employer-provided life insurance count toward my needs?</summary><p>Group life insurance from your employer typically provides 1–2× your annual salary — far less than the 10–12× recommended. It's also not portable: if you leave the job, you lose the coverage. Enter your employer coverage in the 'Existing Coverage' field to see your remaining gap.</p></details>
+    <details><summary>Should I buy life insurance if I'm single with no dependents?</summary><p>If you have no dependents and no co-signed debts, you may need little or no life insurance. However, buying a small policy young locks in low rates for the future. If you plan to have a family within 5–10 years, getting covered now is usually cheaper than waiting.</p></details>
+  </div>
+
+  <div class="ad-slot"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6626869606288906" data-ad-slot="3344556677" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+</div>
+
+<footer><p>LifeInsuranceCalculator · Estimates only. Not financial advice. Verify with a licensed insurance agent.</p><p style="margin-top:6px"><a href="/privacy.html">Privacy Policy</a></p></footer>
+
+<style>
+.radio-btn{padding:9px 20px;border:1.5px solid #e2e8f0;border-radius:8px;font-size:14px;font-weight:600;color:#64748b;background:#f8fafc;cursor:pointer;transition:all .2s}
+.radio-btn.active{border-color:#1e3a5f;background:#eff6ff;color:#1e3a5f}
+</style>
+<script>
+let genderVal='male';
+function setGender(v){genderVal=v;document.getElementById('btn-male').classList.toggle('active',v==='male');document.getElementById('btn-female').classList.toggle('active',v==='female');document.getElementById('gender').value=v;}
+
+const fmt=n=>'$'+Math.round(n).toLocaleString('en-US');
+
+// Term life monthly premium estimate per $1M coverage (20-year term, healthy non-smoker)
+// Male rates approx: age 30=$22, 35=$28, 40=$42, 45=$65, 50=$102, 55=$170
+// Female rates ~20% lower
+function termRate(age,gender){
+  const base={30:22,35:28,40:42,45:65,50:102,55:170,60:270};
+  const ages=Object.keys(base).map(Number).sort((a,b)=>a-b);
+  let rate=base[60];
+  for(let i=0;i<ages.length-1;i++){if(age>=ages[i]&&age<ages[i+1]){const t=(age-ages[i])/(ages[i+1]-ages[i]);rate=base[ages[i]]+(base[ages[i+1]]-base[ages[i]])*t;break;}else if(age<=ages[0]){rate=base[ages[0]];break;}}
+  return gender==='female'?rate*0.8:rate;
+}
+
+function calculate(){
+  const age=parseInt(document.getElementById('age').value)||35;
+  const income=parseFloat(document.getElementById('income').value)||0;
+  const years=parseInt(document.getElementById('years').value)||20;
+  const mortgage=parseFloat(document.getElementById('mortgage').value)||0;
+  const otherDebt=parseFloat(document.getElementById('other-debt').value)||0;
+  const children=parseInt(document.getElementById('children').value)||0;
+  const eduCost=parseFloat(document.getElementById('edu-cost').value)||0;
+  const savings=parseFloat(document.getElementById('savings').value)||0;
+  const existing=parseFloat(document.getElementById('existing').value)||0;
+  const gender=document.getElementById('gender').value;
+
+  const incomeNeed=income*years;
+  const eduTotal=children*eduCost;
+  const totalNeed=incomeNeed+mortgage+otherDebt+eduTotal;
+  const totalAssets=savings+existing;
+  const recommended=Math.max(0,totalNeed-totalAssets);
+  const gap=Math.max(0,recommended-existing);
+  const coverageTotal=recommended;
+
+  document.getElementById('total-coverage').textContent=fmt(coverageTotal);
+  document.getElementById('coverage-sub').textContent=`DIME method · ${(coverageTotal/Math.max(income,1)).toFixed(1)}× annual income`;
+
+  // Breakdown
+  const bd=document.getElementById('breakdown');
+  bd.innerHTML=`
+    <div class="bk-item"><span class="bk-name">Income replacement (${years} yrs)</span><span class="bk-val">${fmt(incomeNeed)}</span></div>
+    <div class="bk-item"><span class="bk-name">Mortgage payoff</span><span class="bk-val">${fmt(mortgage)}</span></div>
+    <div class="bk-item"><span class="bk-name">Other debts</span><span class="bk-val">${fmt(otherDebt)}</span></div>
+    <div class="bk-item"><span class="bk-name">Education (${children} child${children!==1?'ren':''})</span><span class="bk-val">${fmt(eduTotal)}</span></div>
+    <div class="bk-item deduct"><span class="bk-name">− Savings & investments</span><span class="bk-val">−${fmt(savings)}</span></div>
+    <div class="bk-item deduct"><span class="bk-name">− Existing coverage</span><span class="bk-val">−${fmt(existing)}</span></div>
+  `;
+
+  // Gap bars
+  const tot=Math.max(coverageTotal,1);
+  const gapPct=Math.min(gap/tot*100,100);
+  const covPct=Math.min(Math.min(existing,coverageTotal)/tot*100,100);
+  document.getElementById('gap-bar').style.width=gapPct+'%';
+  document.getElementById('covered-bar').style.width=covPct+'%';
+  document.getElementById('gap-label').textContent=fmt(gap)+' needed';
+  document.getElementById('covered-label').textContent=fmt(Math.min(existing,coverageTotal))+' covered';
+
+  // Plan cards
+  const ratePerM=termRate(age,gender);
+  const coverage=Math.max(coverageTotal,100000);
+  const termMo=ratePerM*(coverage/1000000);
+  const wholeMo=termMo*8;
+  const pg=document.getElementById('plan-grid');
+  pg.innerHTML=`
+    <div class="plan-card term recommended">
+      <div class="ptitle">Term Life (20-year)</div>
+      <div class="pprice">${fmt(termMo)}</div>
+      <div class="pmo">/month estimate</div>
+      <div class="pdesc">Fixed premium for 20 years. Coverage ends after term. Best value for most families.</div>
+    </div>
+    <div class="plan-card whole">
+      <div class="ptitle">Whole Life (Permanent)</div>
+      <div class="pprice">${fmt(wholeMo)}</div>
+      <div class="pmo">/month estimate</div>
+      <div class="pdesc">Lifetime coverage + cash value growth. 5–10× more expensive. Better for estate planning.</div>
+    </div>
+  `;
+
+  // Info box
+  const infoEl=document.getElementById('info-box');
+  if(gap<=0){infoEl.textContent='✅ Great news — your existing savings and coverage may already be sufficient based on the DIME method. Review annually as your situation changes.';}
+  else if(gap<250000){infoEl.textContent=`💡 You need approximately ${fmt(gap)} in additional coverage. A 20-year term policy at your age is very affordable — shop quotes now to lock in your current health rating.`;}
+  else{infoEl.textContent=`💡 You need ${fmt(gap)} in additional coverage — a significant gap. Consider a 20-year term policy immediately. Buying now (age ${age}) vs. waiting 5 years could save $${Math.round(termMo*12*5*0.3).toLocaleString()} in premiums over the policy's life.`;}
+
+  document.getElementById('results').style.display='block';
+  document.getElementById('results').scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+window.addEventListener('DOMContentLoaded',calculate);
+</script>
+</body>
+</html>
