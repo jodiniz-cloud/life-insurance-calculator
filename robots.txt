@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://life-insurance-calculator.pages.dev/sitemap.xml
+Sitemap: https://life-insurance-calculator-cic.pages.dev/sitemap.xml
